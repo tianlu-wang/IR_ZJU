@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block body %}
+  <center>
+    <img src="{{ url_for('static', filename='The_Future_Project_Logo.png') }}" width="200">
+    <h2>Retrieval everything you want</h2>
+  </center>
+  <form action="{{ url_for('do_search') }}" method="post" class="add-entry">
+    <dl>
+      <dt>Query:
+      <dd><input type="text" size="60" name="query">
+      <dd><input type="submit" name="submit" value="query">
+      <input type="submit" name="submit" value="boolean">
+      <input type="submit" name="submit" value="phrase">
+      <input type="submit" name="submit" value="similar">
+    </dl>
+  </form>
+  <h2>Project detail</h2>
+  <ul>
+    <li><h2>Website</h2>
+      <dl>
+        <dt><a href="http://git.gbcgbc.com/wenri/ir2015">http://git.gbcgbc.com/wenri/ir2015</a></dt>
+      </dl>
+    <li><h2>Members of Group X</h2>
+    <dl>
+      <dt>Shengming Zhang
+      <dd>Codecs
+      <dt>Yun Shen
+      <dd>Stem, Searcher
+      <dt>Tianlu Wang
+      <dd>Index, Abstract
+      <dt>Bingchen Gong
+      <dd>Analysis
+    </dl>
+    <li><h2>Special thanks:</h2>
+    <dl>
+      <dt>To Group One
+      <dd>for their highlighter javascript
+      <dt>To every member in Group X
+      <dd>for your diligent and efforts
+      <dt>To teacher & students of this class
+      <dd>for presenting the wonderful lessons
+      <dt>To who using this project
+      <dd>thanks for testing
+    </dl>
+  </ul>
+{% endblock %}
